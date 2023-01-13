@@ -7,7 +7,7 @@ class Login extends React.Component {
   state = {
     userName: '',
     disableButton: true,
-    loggedIn: false,
+    logIn: false,
   };
 
   handleChange = ({ target: { name, value } }) => {
@@ -30,12 +30,12 @@ class Login extends React.Component {
     this.setState({ isLoading: true });
     createUser({ name: userName })
       .then(() => {
-        this.setState({ isLoading: false, loggedIn: true });
+        this.setState({ isLoading: false, logIn: true });
       });
   };
 
   render() {
-    const { userName, disableButton, isLoading, loggedIn } = this.state;
+    const { userName, disableButton, isLoading, logIn } = this.state;
     const { handleChange, handleClick } = this;
     return (
       <div data-testid="page-login">
@@ -61,7 +61,7 @@ class Login extends React.Component {
             >
               Entrar
             </button>
-            {loggedIn ? (<Redirect to="/search" />) : null}
+            {logIn ? (<Redirect to="/search" />) : null}
           </form>
         )}
       </div>
