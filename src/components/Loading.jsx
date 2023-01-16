@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 class Loading extends React.Component {
   render() {
     const { isLoading } = this.props;
-    const loading = <span>Carregando...</span>;
+    const loading = <h2>Carregando...</h2>;
     return (
       <div>
         { isLoading ? loading : null }
+        {console.log('loading')}
       </div>
     );
   }

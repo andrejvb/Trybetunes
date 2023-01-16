@@ -25,8 +25,6 @@ export default class Album extends Component {
       tracksList: songs,
     //   loading: false,
     });
-    console.log(infoAlbum);
-    console.log(songs);
   };
 
   render() {
@@ -50,6 +48,7 @@ export default class Album extends Component {
                 key={ song.trackId }
                 trackName={ song.trackName }
                 previewUrl={ song.previewUrl }
+                trackId={ song.trackId }
               />
             ))}
           </section>

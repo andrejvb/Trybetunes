@@ -24,7 +24,7 @@ class Header extends React.Component {
   };
 
   render() {
-    const { state: { isLoading, userName } } = this;
+    const { isLoading, userName } = this.state;
     return (
       <header data-testid="header-component">
         <nav>
