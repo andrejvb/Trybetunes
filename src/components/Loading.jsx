@@ -8,7 +8,6 @@ class Loading extends React.Component {
     return (
       <div>
         { isLoading ? loading : null }
-        {console.log('loading')}
       </div>
     );
   }
